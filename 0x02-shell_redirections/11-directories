@@ -1,0 +1,2 @@
+#!/bin/bash
+find -mithdeph 1 -type d | wc -l  
