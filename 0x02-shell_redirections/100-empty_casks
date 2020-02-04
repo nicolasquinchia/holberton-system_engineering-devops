@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -mindepth 0 -empty -print 
+find . -empty -print "\n"
