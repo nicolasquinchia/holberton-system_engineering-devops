@@ -1,5 +1,6 @@
 # Create a file with certain requirements
 file { '/tmp/holberton':
+  ensure  => 'tmp/holberton',
   path    => 'tmp/holberton',
   mode    => '0744',
   owner   => www-data,
