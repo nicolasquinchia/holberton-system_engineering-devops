@@ -6,8 +6,8 @@ then
 else
         if [ "$#" -eq 3 ]
         then
-                scp root@localhost -o "StrictHostKeyChecking=no" "$1" "$3":"$2":~/
+                scp -o "StrictHostKeyChecking=no" "$1" "$3"@"$2":~/
         else
-                scp root@localhost -i "$4" "$1" "$3":"$2":~/
+                scp -i "$4" "$1" "$3"@"$2":~/
         fi
 fi
