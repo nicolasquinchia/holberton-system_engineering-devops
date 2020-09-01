@@ -1,11 +1,11 @@
 # Configuring your server with Puppet!
-package {'nginx':
+package { 'nginx':
     ensure   => 'lastest',
     name     => 'nginx',
     provider => 'apt'
 }
 
-file {'html':
+file { 'html':
     path    => '/var/www/html/index.nginx-debian.html',
     mode    => '0644',
     content => 'Holberton School'
