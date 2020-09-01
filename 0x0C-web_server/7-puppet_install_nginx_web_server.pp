@@ -8,8 +8,6 @@ package {'nginx':
 file {'html':
     path    => '/var/www/html/index.nginx-debian.html',
     mode    => '0644',
-    owner   => 'ubuntu',
-    group   => 'ubuntu',
     content => 'Holberton School'
 }
 
