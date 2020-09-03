@@ -7,9 +7,10 @@ sudo echo "frontend load_balancer
 	bind *:80
 	mode http
 	default_backend web_servers
-backend lilium
+
+backend web_servers
 	balance roundrobin
-	server 1671-web-01 34.74.245.189:80 check
-	server 1671-web-02 34.75.88.143:80 check
+	server gc-1671-web-01-1596431632 34.74.245.189:80 check
+	server gc-1671-web-02-1597382359 34.75.88.143:80 check
 " >> /etc/haproxy/haproxy.cfg
 sudo service haproxy start
