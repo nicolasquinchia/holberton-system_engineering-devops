@@ -13,7 +13,7 @@ def top_ten(subreddit):
     Args:
         subreddit ([str]): User to query for
     """
-    headers = {'User-agent': 'nicolasquinchia'}
+    headers = {'User-agent': 'Nicolasquinchia'}
     url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
     get_req = requests.get(
         url,
@@ -23,6 +23,6 @@ def top_ten(subreddit):
     get_data = get_req.json().get('data').get('children')
     if get_req.status_code == 200:
         for posts in get_data:
-            print(posts.get('data').get('tittle'))
+            print(posts.get('data').get('title'))
     else:
         print("None")
